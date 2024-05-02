@@ -1,0 +1,24 @@
+.displayitem {
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  padding: auto;
+  padding-left: 20px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+.modrenbutton {
+  color: white;
+  background-color: #f7ca18;
+  padding: 9px 20px;
+  border: none;
+  border-radius: 6px;
+  margin: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
