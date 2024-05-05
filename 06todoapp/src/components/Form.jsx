@@ -1,12 +1,12 @@
 import { useState } from "react";
 import styles from "./form.module.css";
 export default function Form({ Todos, SetTodos }) {
-  const [Todo, SetTodo] = useState("");
+  const [Todo, SetTodo] = useState({ name: "", isdone: false });
 
   function handleSubmit(e) {
     e.preventDefault();
     SetTodos([...Todos, Todo]);
-    SetTodo("");
+    SetTodo({ name: "", isdone: false });
   }
 
   return (
@@ -14,9 +14,9 @@ export default function Form({ Todos, SetTodos }) {
       <div className={styles.inputcontainer}>
         <input
           className={styles.modreninput}
-          onChange={(e) => SetTodo(e.target.value)}
+          onChange={(e) => SetTodo({ name: e.target.value, isdone: false })}
           type="text"
-          value={Todo}
+          value={Todo.name}
           placeholder="Enter Todo Item"
         ></input>{" "}
         <button className={styles.modrenbutton}>Add</button>
